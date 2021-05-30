@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+}
+.login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+}
+.login a {
+  padding: 20px;
+  color: white;
+  border-radius: 100px;
+  background-color: #1db954;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
