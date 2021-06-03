@@ -45,6 +45,12 @@ function App() {
           discover_weekly: response,
         });
       });
+      spotify.getMySavedTracks(_token).then((liked_tracks) => {
+        dispatch({
+          type: "SET_LIKED",
+          liked: liked_tracks,
+        });
+      });
     }
   }, []);
 

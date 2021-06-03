@@ -6,6 +6,9 @@ export const initialState = {
   top_artists: null,
   playing: false,
   item: null,
+  token: "",
+  uri: "",
+  liked: null,
 };
 
 const reducer = (state, action) => {
@@ -16,6 +19,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         user: action.user,
+      };
+    case "SET_URI":
+      return {
+        ...state,
+        uri: action.uri,
       };
     case "SET_TOKEN":
       return {
@@ -46,6 +54,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         spotify: action.spotify,
+      };
+    case "SET_LIKED":
+      return {
+        ...state,
+        liked: action.liked,
       };
     default:
       return state;
